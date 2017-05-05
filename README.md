@@ -3,13 +3,13 @@
   1. Setup / Components
     * Class
       MVP
-      - Animal: (public species: string, public order: string, public family: string, public name: string, public age: number, public diet: string, public location: string, public caretakers: number, public sex: string, public likes: string, public dislikes: string )
+      😃- Animal: (public species: string, public order: string, public family: string, public name: string, public age: number, public diet: string, public location: string, public caretakers: number, public sex: string, public likes: string, public dislikes: string )
 
     * Component Templates
-      - List animals
-      - New animals
-      - Edit animals  
-        - name, age, caretakers
+      😃- List animals
+      😃- New animals
+      😃- Edit animals  
+        😃- name, age, caretakers
 
     * Filters / Pipes
       - Animal age
