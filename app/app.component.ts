@@ -6,8 +6,7 @@ import { Animal } from './zoo-animals.model';
   template: `
   <div class="container">
     <div class="row">
-      <p>this is the app-root page</p>
-      <animal-list></animal-list>
+      <animal-list [childAnimalList]="allAnimals"></animal-list>
     </div>
   </div>
   `
