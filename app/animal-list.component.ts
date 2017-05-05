@@ -17,8 +17,8 @@ import { Animal } from './zoo-animals.model';
       {{currentAnimal.sex}}
       {{currentAnimal.likes}}
       {{currentAnimal.dislikes}}
+      <button (click)="editAnimal(currentAnimal)">Edit</button>
     </p>
-    <button (click)="editAnimal(currentAnimal)">Edit</button>
   </div>
   `
 })

@@ -8,6 +8,7 @@ import { Animal } from './zoo-animals.model';
     <div class="row">
       <animal-list [childAnimalList]="allAnimals" (clickSender)="editAnimal($event)"></animal-list>
       <edit-animal [childSelectedAnimal]="selectedAnimal" (clickSender)="finishedEditing()"></edit-animal>
+      <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
     </div>
   </div>
   `
@@ -26,5 +27,9 @@ export class AppComponent {
 
   finishedEditing() {
     this.selectedAnimal = null;
+  }
+
+  addAnimal(newAnimalFromChild: Animal) {
+    this.allAnimals.push(newAnimalFromChild);
   }
 }
