@@ -29,7 +29,7 @@ import { Animal } from './zoo-animals.model';
       </div>
       <div>
         <label>Diet:</label>
-        <input #newDiet placeholder="Meat">
+        <input #newDiet placeholder="Carnivore, Herbivore">
       </div>
       <div>
         <label>Location:</label>

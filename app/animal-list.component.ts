@@ -12,9 +12,20 @@ import { Animal } from './zoo-animals.model';
     </select>
   </h2>
 
+  <h2>
+    <select (change)="onChangeDiet($event.target.value)">
+      <option value="allDiets">All Diets</option>
+      <option value="carnivore">Carnivore</option>
+      <option value="herbivore">Herbivore</option>
+      <option value="omnivore">Omnivore</option>
+      <option value="fungivore">Fungivore</option>
+      <option value="bacterivore">Bacterivore</option>
+    </select>
+  </h2>
+
   <div class="container">
     <div class="row">
-      <div *ngFor="let currentAnimal of childAnimalList | ages:filterByAge">
+      <div *ngFor="let currentAnimal of childAnimalList | ages:filterByAge | diet:filterByDiet">
         <div class="col-md-12">
           <div class="panel panel-success">
             <div class="panel-heading">
@@ -84,9 +95,14 @@ export class AnimalListComponent {
   @Output() clickSender = new EventEmitter();
 
   filterByAge: string = "allAges";
+  filterByDiet: string = "allDiets";
 
   onChange(optionFromAgeList) {
     this.filterByAge = optionFromAgeList;
+  }
+
+  onChangeDiet(optionFromDietList) {
+    this.filterByDiet = optionFromDietList;
   }
 
   editAnimal(animalToEdit: Animal) {
