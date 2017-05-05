@@ -12,7 +12,6 @@ import { Animal } from './zoo-animals.model';
         <a class="navbar-brand" href="/">The Ranch Zoo</a>
       </div>
       <ul class="nav navbar-nav">
-        <li><a href="/">Home</a></li>
         <li><a (click)="showAnimalForm()">Add Animal</a></li>
       </ul>
     </div>

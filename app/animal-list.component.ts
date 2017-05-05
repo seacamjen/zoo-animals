@@ -13,12 +13,19 @@ import { Animal } from './zoo-animals.model';
   <div class="container">
     <div class="row">
       <div *ngFor="let currentAnimal of childAnimalList | ages:filterByAge">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="panel panel-success">
             <div class="panel-heading">
               <div class="panel-title">
-                {{currentAnimal.name}} - {{currentAnimal.age}}
-                <span class="pull-right">gender: {{currentAnimal.sex}}</span>
+                <h3>
+                  Name: {{currentAnimal.name}}
+                  <span class="center">
+                    Age: {{currentAnimal.age}}
+                  </span>
+                  <span class="pull-right">
+                    gender: {{currentAnimal.sex}}
+                  </span>
+                </h3>
               </div>
             </div>
             <div class="panel-body">
@@ -29,31 +36,38 @@ import { Animal } from './zoo-animals.model';
                 <div class="col-md-7">
                   <div class="row">
                     <div class="col-md-6">
-                      <ul>
-                        <li><strong>Species:</strong> {{currentAnimal.species}}</li>
-                        <li><strong>Order:</strong> {{currentAnimal.order}}</li>
-                        <li><strong>Family:</strong> {{currentAnimal.family}}</li>
-                      </ul>
+                      <h2>
+                        <ul>
+                          <li><strong>Species:</strong> {{currentAnimal.species}}</li>
+                          <li><strong>Order:</strong> {{currentAnimal.order}}</li>
+                          <li><strong>Family:</strong> {{currentAnimal.family}}</li>
+                        </ul>
+                      </h2>
                     </div>
                     <div class="col-md-6">
-                      <strong>Origin:</strong> {{currentAnimal.location}}
+                      <h2>
+                        <strong>Origin:</strong> {{currentAnimal.location}}
+                      </h2>
                     </div>
                   </div>
                   <hr>
                   <div class="row">
-                    <h5>Diet</h5>
-                    <p>
-                      {{currentAnimal.diet}}
+                    <h1 class="center">
+                      Diet - {{currentAnimal.diet}}
+                    </h1>
+                    <h2 class="center">
                       <strong>Likes:</strong> {{currentAnimal.likes}}
                       <strong>Dislikes:</strong> {{currentAnimal.dislikes}}
-                    </p>
+                    </h2>
                   </div>
                 </div>
               </div>
             </div>
             <div class="panel-footer">
-              caretakers: {{currentAnimal.caretakers}}
-              <button class="pull-right" (click)="editAnimal(currentAnimal)">Edit</button>
+              <h3>
+                Caretakers: {{currentAnimal.caretakers}}
+                <button class="pull-right btn-lg" (click)="editAnimal(currentAnimal)">Edit</button>
+              </h3>
             </div>
           </div>
         </div>

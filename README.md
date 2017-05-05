@@ -17,7 +17,7 @@
 
     * Misc / Further
       😃- Add to animal model attributes
-      - Display total number of caretakers needed
+      😃- Display total number of caretakers needed
       - timestamp of when animal was added
       - Add custom SASS
       * Filters / Pipes
