@@ -4,11 +4,13 @@ import { Animal } from './zoo-animals.model';
 @Component({
   selector: `animal-list`,
   template: `
-  <select (change)="onChange($event.target.value)">
-    <option value="allAges">All Ages</option>
-    <option value="young">Young Animals</option>
-    <option value="old">Old Animals</option>
-  </select>
+  <h2>
+    <select (change)="onChange($event.target.value)">
+      <option value="allAges">All Ages</option>
+      <option value="young">Young Animals</option>
+      <option value="old">Old Animals</option>
+    </select>
+  </h2>
 
   <div class="container">
     <div class="row">
