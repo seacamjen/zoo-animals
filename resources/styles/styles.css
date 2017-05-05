@@ -16,3 +16,9 @@
  .center {
    text-align: center;
  }
+
+ .center-footer {
+   position: absolute;
+   bottom: 7%;
+   left: 90%
+ }

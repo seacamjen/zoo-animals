@@ -15,11 +15,11 @@ import { Animal } from './zoo-animals.model';
           </h2>
         </a>
       </div>
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav pull-right">
         <li>
           <a>
             <h2>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+              <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">
               Add Animal
               </button>
             </h2>

@@ -4,24 +4,31 @@ import { Animal } from './zoo-animals.model';
 @Component({
   selector: `animal-list`,
   template: `
-  <h2>
-    <select (change)="onChange($event.target.value)">
-      <option value="allAges">All Ages</option>
-      <option value="young">Young Animals</option>
-      <option value="old">Old Animals</option>
-    </select>
-  </h2>
-
-  <h2>
-    <select (change)="onChangeDiet($event.target.value)">
-      <option value="allDiets">All Diets</option>
-      <option value="carnivore">Carnivore</option>
-      <option value="herbivore">Herbivore</option>
-      <option value="omnivore">Omnivore</option>
-      <option value="fungivore">Fungivore</option>
-      <option value="bacterivore">Bacterivore</option>
-    </select>
-  </h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 center">
+        <h2>
+          <select (change)="onChange($event.target.value)">
+            <option value="allAges">All Ages</option>
+            <option value="young">Young Animals</option>
+            <option value="old">Old Animals</option>
+          </select>
+        </h2>
+      </div>
+      <div class="col-md-6 center">
+        <h2>
+          <select (change)="onChangeDiet($event.target.value)">
+            <option value="allDiets">All Diets</option>
+            <option value="carnivore">Carnivore</option>
+            <option value="herbivore">Herbivore</option>
+            <option value="omnivore">Omnivore</option>
+            <option value="fungivore">Fungivore</option>
+            <option value="bacterivore">Bacterivore</option>
+          </select>
+        </h2>
+      </div>
+    </div>
+  </div>
 
   <div class="container">
     <div class="row">
@@ -79,7 +86,9 @@ import { Animal } from './zoo-animals.model';
             <div class="panel-footer">
               <h3>
                 Caretakers: {{currentAnimal.caretakers}}
-                <button class="pull-right btn-lg" (click)="editAnimal(currentAnimal)">Edit</button>
+                <button (click)="editAnimal(currentAnimal)" type="button" class="btn btn-warning btn-lg center-footer" data-toggle="modal" data-target="#editModal">
+                  Edit
+                </button>
               </h3>
             </div>
           </div>
