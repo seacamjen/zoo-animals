@@ -4,6 +4,8 @@ import { Animal } from './zoo-animals.model';
 @Component ({
   selector: 'app-root',
   template: `
+  <div class="container-fluid header">
+  </div>
   <nav class="navbar navbar-default" data-spy="affix" data-offset-top="300">
     <div class="container-fluid">
       <div class="navbar-header">
