@@ -18,7 +18,9 @@ export class AppComponent {
   selectedAnimal = null;
 
   allAnimals: Animal[] = [
-    new Animal("Tiger", "Carnivore", "Cat", "Kitty", 2, "meat", "Siberia", 4, "Male", "beef", "carrots")
+    new Animal("Tiger", "Carnivore", "Cat", "Kitty", 2, "meat", "Siberia", 4, "Male", "beef", "carrots"),
+    new Animal("Tiger", "Carnivore", "Cat", "Francis", 3, "meat", "Siberia", 4, "Male", "beef", "carrots"),
+    new Animal("Tiger", "Carnivore", "Cat", "Carl", 1, "meat", "Siberia", 4, "Male", "beef", "carrots")
   ];
 
   editAnimal(clickedAnimal) {

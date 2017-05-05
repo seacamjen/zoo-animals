@@ -4,7 +4,13 @@ import { Animal } from './zoo-animals.model';
 @Component({
   selector: `animal-list`,
   template: `
-  <div *ngFor="let currentAnimal of childAnimalList">
+  <select (change)="onChange($event.target.value)">
+    <option value="allAges">All Ages</option>
+    <option value="young">Young Animals</option>
+    <option value="old">Old Animals</option>
+  </select>
+
+  <div *ngFor="let currentAnimal of childAnimalList | ages:filterByAge">
     <p>
       {{currentAnimal.name}}
       {{currentAnimal.species}}
@@ -26,6 +32,12 @@ import { Animal } from './zoo-animals.model';
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter();
+
+  filterByAge: string = "allAges";
+
+  onChange(optionFromAgeList) {
+    this.filterByAge = optionFromAgeList;
+  }
 
   editAnimal(animalToEdit: Animal) {
     this.clickSender.emit(animalToEdit);

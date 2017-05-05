@@ -12,11 +12,11 @@
         😃- name, age, caretakers
 
     * Filters / Pipes
-      - Animal age
-        - All, less than 2, Older than 2
+      😃- Animal age
+        😃- All, less than 2, Older than 2
 
     * Misc / Further
-      - Add to animal model attributes
+      😃- Add to animal model attributes
       - Display total number of caretakers needed
       - timestamp of when animal was added
       - Add custom SASS
