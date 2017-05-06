@@ -1,3 +1,7 @@
+[![Code Climate](https://codeclimate.com/github/seacamjen/zoo-animals/badges/gpa.svg)](https://codeclimate.com/github/seacamjen/zoo-animals)
+
+[![Issue Count](https://codeclimate.com/github/seacamjen/zoo-animals/badges/issue_count.svg)](https://codeclimate.com/github/seacamjen/zoo-animals)
+
 ## Zoo animals
 
 _Do you need a simple way to keep track of all the animals at your zoo? This simple program will allow you to view all the animals at your zoo. Then you may sort this view by age or diet. Each animal display shows their species, order, family in their taxonomy, as well as their name, age, diet type, likes, dislikes, gender, and number of caretakers they need. You also have the ability to add new animals and update existing animals._
