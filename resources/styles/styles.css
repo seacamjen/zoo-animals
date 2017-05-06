@@ -7,7 +7,6 @@
 }
 
 .affix {
-  top: 0px;
   width: 100%;
   transition-duration:1s;
   transition-timing-function: ease;
